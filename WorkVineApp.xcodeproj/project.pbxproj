@@ -14,6 +14,10 @@
 		8687607F2C3D939700D8016F /* WorkVineAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687607E2C3D939700D8016F /* WorkVineAppTests.swift */; };
 		868760892C3D939700D8016F /* WorkVineAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868760882C3D939700D8016F /* WorkVineAppUITests.swift */; };
 		8687608B2C3D939700D8016F /* WorkVineAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687608A2C3D939700D8016F /* WorkVineAppUITestsLaunchTests.swift */; };
+		868760982C3D941000D8016F /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868760972C3D941000D8016F /* SignIn.swift */; };
+		8687609A2C3D945900D8016F /* BusinessEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868760992C3D945900D8016F /* BusinessEntry.swift */; };
+		8687609C2C3D947C00D8016F /* StudentHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687609B2C3D947C00D8016F /* StudentHome.swift */; };
+		8687609E2C3D949800D8016F /* BusinessHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687609D2C3D949800D8016F /* BusinessHome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		868760842C3D939700D8016F /* WorkVineAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkVineAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		868760882C3D939700D8016F /* WorkVineAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkVineAppUITests.swift; sourceTree = "<group>"; };
 		8687608A2C3D939700D8016F /* WorkVineAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkVineAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		868760972C3D941000D8016F /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		868760992C3D945900D8016F /* BusinessEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessEntry.swift; sourceTree = "<group>"; };
+		8687609B2C3D947C00D8016F /* StudentHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHome.swift; sourceTree = "<group>"; };
+		8687609D2C3D949800D8016F /* BusinessHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,10 @@
 			children = (
 				8687606D2C3D939600D8016F /* WorkVineAppApp.swift */,
 				8687606F2C3D939600D8016F /* ContentView.swift */,
+				868760972C3D941000D8016F /* SignIn.swift */,
+				868760992C3D945900D8016F /* BusinessEntry.swift */,
+				8687609B2C3D947C00D8016F /* StudentHome.swift */,
+				8687609D2C3D949800D8016F /* BusinessHome.swift */,
 				868760712C3D939700D8016F /* Assets.xcassets */,
 				868760732C3D939700D8016F /* Preview Content */,
 			);
@@ -257,7 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8687609A2C3D945900D8016F /* BusinessEntry.swift in Sources */,
 				868760702C3D939600D8016F /* ContentView.swift in Sources */,
+				8687609E2C3D949800D8016F /* BusinessHome.swift in Sources */,
+				868760982C3D941000D8016F /* SignIn.swift in Sources */,
+				8687609C2C3D947C00D8016F /* StudentHome.swift in Sources */,
 				8687606E2C3D939600D8016F /* WorkVineAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
