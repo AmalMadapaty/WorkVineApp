@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8620FDF82C4036FA00C53933 /* OtherHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8620FDF72C4036FA00C53933 /* OtherHome.swift */; };
 		8687606E2C3D939600D8016F /* WorkVineAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687606D2C3D939600D8016F /* WorkVineAppApp.swift */; };
 		868760702C3D939600D8016F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687606F2C3D939600D8016F /* ContentView.swift */; };
 		868760722C3D939700D8016F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868760712C3D939700D8016F /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8620FDF72C4036FA00C53933 /* OtherHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherHome.swift; sourceTree = "<group>"; };
 		8687606A2C3D939600D8016F /* WorkVineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkVineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8687606D2C3D939600D8016F /* WorkVineAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkVineAppApp.swift; sourceTree = "<group>"; };
 		8687606F2C3D939600D8016F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				868760992C3D945900D8016F /* BusinessEntry.swift */,
 				8687609B2C3D947C00D8016F /* StudentHome.swift */,
 				8687609D2C3D949800D8016F /* BusinessHome.swift */,
+				8620FDF72C4036FA00C53933 /* OtherHome.swift */,
 				868760712C3D939700D8016F /* Assets.xcassets */,
 				868760732C3D939700D8016F /* Preview Content */,
 			);
@@ -274,6 +277,7 @@
 				8687609E2C3D949800D8016F /* BusinessHome.swift in Sources */,
 				868760982C3D941000D8016F /* SignIn.swift in Sources */,
 				8687609C2C3D947C00D8016F /* StudentHome.swift in Sources */,
+				8620FDF82C4036FA00C53933 /* OtherHome.swift in Sources */,
 				8687606E2C3D939600D8016F /* WorkVineAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

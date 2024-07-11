@@ -7,16 +7,6 @@
 
 import SwiftUI
 
-struct JobEntry: Identifiable {
-    let id = UUID()
-    var jobTitle: String
-    var companyName: String
-    var city: String
-    var period: String
-    var hourlyRate: String // New property for hourly rate
-    var photo: UIImage?
-}
-
 struct BusinessAcc: View {
     @State private var businessName: String = "Business Name"
     @State private var cityState: String = "City, State"
@@ -26,15 +16,6 @@ struct BusinessAcc: View {
     @State private var isEditingBio: Bool = false
     @State private var profileImage: UIImage? = nil
     @State private var showImagePicker: Bool = false
-    @State private var jobEntries: [JobEntry] = []
-    @State private var jobTitle: String = ""
-    @State private var companyName: String = ""
-    @State private var city: String = ""
-    @State private var period: String = ""
-    @State private var hourlyRate: String = ""
-    @State private var selectedImage: UIImage?
-    @State private var showingImagePicker = false
-    @State private var showingForm = false
     
     var body: some View {
         let someColor = Color(red: 0/255, green: 44/255, blue: 92/255)
@@ -186,149 +167,13 @@ struct BusinessAcc: View {
             Rectangle()
                 .frame(width: 340, height: 1)
                 .padding(.bottom, 320)
-            ScrollView {
-                VStack {
-                    if showingForm {
-                        ZStack {
-                            Color(.systemGray6)
-                            VStack {
-                                Text("Add Job Entry")
-                                    .font(.headline)
-                                    .padding()
-                                TextField("Job Title", text: $jobTitle)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding([.leading, .trailing, .top])
-                                TextField("Company Name", text: $companyName)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding([.leading, .trailing])
-                                TextField("City, State", text: $city)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding([.leading, .trailing])
-                                TextField("Working Hours", text: $period)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding([.leading, .trailing])
-                                TextField("Hourly Rate", text: $hourlyRate)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding([.leading, .trailing])
-                                Button(action: {
-                                    showingImagePicker = true
-                                }) {
-                                    Text("Upload Photo")
-                                }
-                                .padding()
-                                if let selectedImage = selectedImage {
-                                    Image(uiImage: selectedImage)
-                                        .resizable()
-                                        .frame(width: 90, height: 90)
-                                        .clipShape(Circle())
-                                        .padding()
-                                }
-                                Button(action: submitJobEntry) {
-                                    Text("Add")
-                                        .padding()
-                                        .background(Color.blue)
-                                        .foregroundColor(.white)
-                                        .cornerRadius(10)
-                                }
-                                .padding()
-                            }
-                            .padding()
-                            .frame(width: 338)
-                        }
-                        .cornerRadius(10)
-                        .padding()
-                    } else {
-                        HStack {
-                            Text("Jobs")
-                                .font(.title)
-                                .bold()
-                                .padding(.bottom, 2)
-                            Button(action: {
-                                showingForm = true
-                            }) {
-                                Image("Add2")
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .padding(.leading, 243)
-                            }
-                        }
-                    }
-
-                    ForEach(jobEntries) { entry in
-                        HStack {
-                            if let photo = entry.photo {
-                                Image(uiImage: photo)
-                                    .resizable()
-                                    .frame(width: 90, height: 90)
-                            } else {
-                                Rectangle()
-                                    .fill(someColor)
-                                    .frame(width: 90, height: 90)
-                            }
-                            VStack(alignment: .leading) {
-                                Text(entry.jobTitle)
-                                    .font(.headline)
-                                Text(entry.companyName)
-                                    .font(.subheadline)
-                                Text(entry.city)
-                                    .font(.subheadline)
-                                Text(entry.period)
-                                    .font(.subheadline)
-                                Text(entry.hourlyRate) // Display hourly rate
-                                    .font(.subheadline)
-                            }
-                            .padding(.leading, 10)
-                            Spacer()
-                            Button(action: {
-                                deleteJobEntry(entry: entry)
-                            }) {
-                                Image(systemName: "trash")
-                                    .foregroundColor(.red)
-                            }
-                            .padding(.trailing, 70)
-                        }
-                        .padding()
-                        Divider()
-                    }
-                    .padding(.leading, 64)
-                }
-                .padding()
-            }
-            .padding(.top, 25)
-            .frame(height: 360)
-            .sheet(isPresented: $showingImagePicker, content: {
-                ImagePicker(image: $selectedImage)
-            })
             
         }
         .padding(.top, 300)
     }
-    
-    private func submitJobEntry() {
-        // Convert hourlyRate string to Double
-        let newEntry = JobEntry(jobTitle: jobTitle, companyName: companyName, city: city, period: period, hourlyRate: hourlyRate, photo: selectedImage)
-        jobEntries.append(newEntry)
-        clearForm()
-        showingForm = false
-    }
-
-    private func deleteJobEntry(entry: JobEntry) {
-        if let index = jobEntries.firstIndex(where: { $0.id == entry.id }) {
-            jobEntries.remove(at: index)
-        }
-    }
-
-    private func clearForm() {
-        jobTitle = ""
-        companyName = ""
-        city = ""
-        period = ""
-        hourlyRate = ""
-        selectedImage = nil
-    }
 }
 
-struct ImagePicker: UIViewControllerRepresentable {
+struct ImagePick: UIViewControllerRepresentable {
     @Binding var image: UIImage?
 
     func makeUIViewController(context: Context) -> UIImagePickerController {
@@ -345,9 +190,9 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
 
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-        let parent: ImagePicker
+        let parent: ImagePick
 
-        init(parent: ImagePicker) {
+        init(parent: ImagePick) {
             self.parent = parent
         }
 

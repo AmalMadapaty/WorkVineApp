@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct BusinessHome: View {
+struct OtherHome: View {
     var body: some View {
         VStack {
             ZStack{
@@ -237,8 +237,8 @@ struct BusinessHome: View {
         }
     }
 }
-struct BusinessHome_Previews: PreviewProvider {
+struct OtherHome_Previews: PreviewProvider {
     static var previews: some View {
-        BusinessHome()
+        OtherHome()
     }
 }
