@@ -212,7 +212,7 @@ struct OtherHome: View {
                     
                 }
             }
-            }
+        }
         .padding()
         Rectangle()
             .fill(.black)
