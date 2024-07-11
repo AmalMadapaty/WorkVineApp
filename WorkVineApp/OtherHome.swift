@@ -31,7 +31,6 @@ struct BusinessHome: View {
     
     var body: some View {
         let someColor = Color(red: 0/255, green: 44/255, blue: 92/255)
-        let profileColor = Color(red: 211/255, green: 211/255, blue: 211/255)
         let backColor = Color(red: 181/255, green: 202/255, blue: 231/255)
         ZStack {
             ZStack{

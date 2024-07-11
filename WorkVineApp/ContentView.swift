@@ -18,7 +18,6 @@ struct BusinessAcc: View {
     @State private var showImagePicker: Bool = false
     
     var body: some View {
-        let someColor = Color(red: 0/255, green: 44/255, blue: 92/255)
         let profileColor = Color(red: 211/255, green: 211/255, blue: 211/255)
         
         ZStack {
