@@ -88,8 +88,8 @@ struct BusinessAcc: View {
                 .padding(.trailing, 225)
             Image("Account Button")
                 .resizable()
-                .frame(width: 60, height: 55)
-                .padding(.top, 450)
+                .frame(width: 55, height: 55)
+                .padding(.top, 448)
                 .padding(.leading, 210)
             ZStack(alignment: .leading) {
                 if !isEditingBusinessName && !isEditingCityState && !isEditingBio {
@@ -166,7 +166,6 @@ struct BusinessAcc: View {
             Rectangle()
                 .frame(width: 340, height: 1)
                 .padding(.bottom, 320)
-            
         }
         .padding(.top, 300)
     }
