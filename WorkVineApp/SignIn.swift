@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 class User: Identifiable {
-    var id = UUID()  // Added ID for Identifiable protocol
+    var id = UUID()
     var username: String
     var password: String
     
@@ -22,7 +22,10 @@ class User: Identifiable {
         return !username.isEmpty && !password.isEmpty
     }
 }
-
+enum Destination: Hashable {
+    case studentHome
+    case businessHome
+}
 struct HomeView: View {
     @State private var username: String = ""
     @State private var password: String = ""
@@ -31,9 +34,9 @@ struct HomeView: View {
     @State private var users: [User] = []
     @State private var isSigningUp: Bool = false
     @State private var errorMessage: String? = nil
-
+    @State private var navigationSelection: Destination? = nil
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Image("logo")
                     .resizable()
@@ -53,7 +56,7 @@ struct HomeView: View {
                             .frame(width: 300, height: 25)
                             .padding()
                             .background(Color.init(red: 0.0/255.0, green: 44.0/255.0, blue: 92.0/255.0))
-                            .foregroundColor(.yellow)
+                            .foregroundColor(.white)
                             .cornerRadius(8)
                     }
                     Spacer()
@@ -67,7 +70,7 @@ struct HomeView: View {
                             .frame(width: 300, height: 25)
                             .padding()
                             .background(Color.init(red: 0.0/255.0, green: 44.0/255.0, blue: 92.0/255.0))
-                            .foregroundColor(.yellow)
+                            .foregroundColor(.white)
                             .cornerRadius(8)
                     }
                     Spacer()
@@ -98,6 +101,11 @@ struct HomeView: View {
                                     users.append(newUser)
                                     print("New user signed up: \(username)")
                                     self.errorMessage = nil
+                                    if showingStudentLoginForm {
+                                        navigationSelection = .studentHome
+                                    } else {
+                                        navigationSelection = .businessHome
+                                    }
                                 } else {
                                     self.errorMessage = "Invalid sign-up credentials"
                                 }
@@ -113,6 +121,11 @@ struct HomeView: View {
                                 if users.first(where: { $0.username == username && $0.password == password }) != nil {
                                     print("Username: \(username), Password: \(password)")
                                     self.errorMessage = nil
+                                    if showingStudentLoginForm {
+                                        navigationSelection = .studentHome
+                                    } else {
+                                        navigationSelection = .businessHome
+                                    }
                                 } else {
                                     self.errorMessage = "Invalid credentials"
                                 }
@@ -122,12 +135,10 @@ struct HomeView: View {
                                     .background(Color.blue)
                                     .foregroundColor(.white)
                                     .cornerRadius(8)
-
                             }
                             Spacer()
                         }
                     }
-
                     if !isSigningUp {
                         Button(action: {
                             isSigningUp = true
@@ -138,24 +149,29 @@ struct HomeView: View {
                                 .background(Color.green)
                                 .foregroundColor(.white)
                                 .cornerRadius(8)
-
                         }
                     }
                 }
                 
                 Spacer()
+                
+                NavigationLink(destination: StudentHome(), tag: Destination.studentHome, selection: $navigationSelection) {
+                    EmptyView()
+                }
+                NavigationLink(destination: BusinessHome(), tag: Destination.businessHome, selection: $navigationSelection) {
+                    EmptyView()
+                }
             }
         }
     }
 }
-struct ContentView: View {
-        var body: some View {
-            HomeView()
-        }
+struct SignIn: View {
+    var body: some View {
+        HomeView()
     }
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+}
+struct SignInView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignIn()
     }
-
+}

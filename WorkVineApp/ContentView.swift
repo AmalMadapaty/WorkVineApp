@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BusinessAcc: View {
+struct ContentView: View {
     @State private var businessName: String = "Business Name"
     @State private var cityState: String = "City, State"
     @State private var bio: String = "Enter bio here..."
@@ -212,6 +212,6 @@ struct ImagePick: UIViewControllerRepresentable {
 
 struct BusinessAcc_Previews: PreviewProvider {
     static var previews: some View {
-        BusinessAcc()
+        ContentView()
     }
 }
