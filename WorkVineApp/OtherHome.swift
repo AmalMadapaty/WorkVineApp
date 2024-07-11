@@ -19,7 +19,7 @@ struct JobEntry: Identifiable {
 }
 
 struct BusinessHome: View {
-    @State private var jobEntries: [JobEntry] = []
+    @EnvironmentObject var dataModel: JobDataModel
     @State private var jobTitle: String = ""
     @State private var companyName: String = ""
     @State private var city: String = ""
@@ -28,15 +28,15 @@ struct BusinessHome: View {
     @State private var selectedImage: UIImage?
     @State private var showingImagePicker = false
     @State private var showingForm = false
-    
+
     var body: some View {
         let someColor = Color(red: 0/255, green: 44/255, blue: 92/255)
         let backColor = Color(red: 181/255, green: 202/255, blue: 231/255)
         ZStack {
-            ZStack{
+            ZStack {
                 Rectangle()
                     .fill(backColor)
-                    .frame(width:500, height: 90)
+                    .frame(width: 500, height: 90)
                 Text("Welcome Back User!")
                     .font(.title)
                     .bold()
@@ -131,7 +131,7 @@ struct BusinessHome: View {
                         }
                     }
 
-                    ForEach(jobEntries) { entry in
+                    ForEach(dataModel.jobEntries) { entry in
                         HStack {
                             if let photo = entry.photo {
                                 Image(uiImage: photo)
@@ -179,18 +179,18 @@ struct BusinessHome: View {
         }
         .padding(.top, 300)
     }
-    
+
     private func submitJobEntry() {
         // Convert hourlyRate string to Double
         let newEntry = JobEntry(jobTitle: jobTitle, companyName: companyName, city: city, period: period, hourlyRate: hourlyRate, photo: selectedImage)
-        jobEntries.append(newEntry)
+        dataModel.jobEntries.append(newEntry)
         clearForm()
         showingForm = false
     }
 
     private func deleteJobEntry(entry: JobEntry) {
-        if let index = jobEntries.firstIndex(where: { $0.id == entry.id }) {
-            jobEntries.remove(at: index)
+        if let index = dataModel.jobEntries.firstIndex(where: { $0.id == entry.id }) {
+            dataModel.jobEntries.remove(at: index)
         }
     }
 
@@ -244,6 +244,6 @@ struct ImagePicker: UIViewControllerRepresentable {
 
 struct BusinessHome_Previews: PreviewProvider {
     static var previews: some View {
-        BusinessHome()
+        BusinessHome().environmentObject(JobDataModel())
     }
 }
