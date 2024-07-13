@@ -1,11 +1,3 @@
-//
-//  StudentHome.swift
-//  WorkVineApp
-//
-//  Created by user264764 on 7/9/24.
-//
-
-import Foundation
 import SwiftUI
 
 struct StudentHome: View {
@@ -92,6 +84,16 @@ struct StudentHome: View {
                                 }
                                 .padding(.leading, 10)
                                 Spacer()
+                                // Plus button to add the entry to myJobs
+                                Button(action: {
+                                    dataModel.myJobs.append(entry)
+                                }) {
+                                    Image(systemName: "plus")
+                                        .padding()
+                                        .background(Color.blue)
+                                        .foregroundColor(.white)
+                                        .clipShape(Circle())
+                                }
                             }
                             .padding()
                             Divider()
@@ -165,3 +167,4 @@ struct StudentHome_Previews: PreviewProvider {
         StudentHome().environmentObject(JobDataModel())
     }
 }
+

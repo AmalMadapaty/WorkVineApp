@@ -10,4 +10,6 @@ import Combine
 
 class JobDataModel: ObservableObject {
     @Published var jobEntries: [JobEntry] = []
+    @Published var myJobs: [JobEntry] = []
 }
+
