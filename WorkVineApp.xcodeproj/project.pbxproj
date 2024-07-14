@@ -21,6 +21,7 @@
 		8687609C2C3D947C00D8016F /* StudentHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687609B2C3D947C00D8016F /* StudentHome.swift */; };
 		8687609E2C3D949800D8016F /* BusinessHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687609D2C3D949800D8016F /* BusinessHome.swift */; };
 		869003842C42BF9400DDF63C /* MyJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869003832C42BF9400DDF63C /* MyJobs.swift */; };
+		E56EC03B2C442B3900DC96D0 /* BusinessProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56EC03A2C442B3900DC96D0 /* BusinessProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		8687609B2C3D947C00D8016F /* StudentHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentHome.swift; sourceTree = "<group>"; };
 		8687609D2C3D949800D8016F /* BusinessHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessHome.swift; sourceTree = "<group>"; };
 		869003832C42BF9400DDF63C /* MyJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyJobs.swift; sourceTree = "<group>"; };
+		E56EC03A2C442B3900DC96D0 /* BusinessProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +111,12 @@
 			isa = PBXGroup;
 			children = (
 				8687606D2C3D939600D8016F /* WorkVineAppApp.swift */,
-				8687606F2C3D939600D8016F /* ContentView.swift */,
 				868760972C3D941000D8016F /* SignIn.swift */,
-				868760992C3D945900D8016F /* BusinessEntry.swift */,
-				8687609B2C3D947C00D8016F /* StudentHome.swift */,
+				8687606F2C3D939600D8016F /* ContentView.swift */,
 				8687609D2C3D949800D8016F /* BusinessHome.swift */,
+				868760992C3D945900D8016F /* BusinessEntry.swift */,
+				E56EC03A2C442B3900DC96D0 /* BusinessProfile.swift */,
+				8687609B2C3D947C00D8016F /* StudentHome.swift */,
 				863FCFC12C40919B00FDC703 /* JobDataModel.swift */,
 				869003832C42BF9400DDF63C /* MyJobs.swift */,
 				8620FDF72C4036FA00C53933 /* OtherHome.swift */,
@@ -281,6 +284,7 @@
 				8687609A2C3D945900D8016F /* BusinessEntry.swift in Sources */,
 				868760702C3D939600D8016F /* ContentView.swift in Sources */,
 				8687609E2C3D949800D8016F /* BusinessHome.swift in Sources */,
+				E56EC03B2C442B3900DC96D0 /* BusinessProfile.swift in Sources */,
 				863FCFC22C40919B00FDC703 /* JobDataModel.swift in Sources */,
 				868760982C3D941000D8016F /* SignIn.swift in Sources */,
 				8687609C2C3D947C00D8016F /* StudentHome.swift in Sources */,

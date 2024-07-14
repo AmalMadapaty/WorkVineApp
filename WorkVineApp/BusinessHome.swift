@@ -10,6 +10,8 @@ import SwiftUI
 
 struct OtherHome: View {
     var body: some View {
+        let iconColor = Color(red: 0/255, green: 44/255, blue: 92/255)
+        let backColor = Color(red: 181/255, green: 202/255, blue: 231/255)
         VStack {
             ZStack{
                 RoundedRectangle(cornerRadius: 10).stroke(Color.black)
@@ -26,9 +28,9 @@ struct OtherHome: View {
             .padding(.bottom, 15)
             Text("**Welcome Back User!**")
                 .font(.largeTitle)
-                .background(Rectangle().fill(Color("backColor")).frame(width:500, height: 60))
+                .background(Rectangle().fill(Color(backColor)).frame(width:500, height: 60))
             Text("**Here's what's new:**")
-                .background(Rectangle().fill(Color("backColor")).frame(width: 500, height: 40))
+                .background(Rectangle().fill(Color(backColor)).frame(width: 500, height: 40))
             Text("_Current Applicants:_")
                 .padding(.top, 10)
                 .padding(.trailing, 180)
@@ -36,7 +38,7 @@ struct OtherHome: View {
                 HStack{
                     ZStack{
                         Circle()
-                            .fill(Color("iconColor"))
+                            .fill(Color(iconColor))
                             .frame(width:70, height:70)
                         Text("Icon")
                             .foregroundColor(.white)
@@ -61,7 +63,7 @@ struct OtherHome: View {
                 HStack{
                     ZStack{
                         Circle()
-                            .fill(Color("iconColor"))
+                            .fill(Color(iconColor))
                             .frame(width:70, height:70)
                         Text("Icon")
                             .foregroundColor(.white)
@@ -86,7 +88,7 @@ struct OtherHome: View {
                 HStack{
                     ZStack{
                         Circle()
-                            .fill(Color("iconColor"))
+                            .fill(Color(iconColor))
                             .frame(width:70, height:70)
                         Text("Icon")
                             .foregroundColor(.white)
@@ -111,7 +113,7 @@ struct OtherHome: View {
                 HStack{
                     ZStack{
                         Circle()
-                            .fill(Color("iconColor"))
+                            .fill(Color(iconColor))
                             .frame(width:70, height:70)
                         Text("Icon")
                             .foregroundColor(.white)
@@ -136,33 +138,7 @@ struct OtherHome: View {
                 HStack{
                     ZStack{
                         Circle()
-                            .fill(Color("iconColor"))
-                            .frame(width:70, height:70)
-                        Text("Icon")
-                            .foregroundColor(.white)
-                    }
-                    .padding(.trailing, 10)
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10).stroke(Color.black)
-                            .frame(width:250, height:85)
-                        VStack{
-                            Text("**Name**")
-                                .font(.title2)
-                                .padding(.trailing, 170)
-                            Text("*Contact Info*")
-                                .padding(.trailing, 136)
-                            Text("Link to Bio")
-                                .underline()
-                                .padding(.trailing, 150)
-                        }
-                    }
-                    .padding(.bottom, 5)
-                    
-                }
-                HStack{
-                    ZStack{
-                        Circle()
-                            .fill(Color("iconColor"))
+                            .fill(Color(iconColor))
                             .frame(width:70, height:70)
                         Text("Icon")
                             .foregroundColor(.white)
@@ -188,7 +164,33 @@ struct OtherHome: View {
                 HStack{
                     ZStack{
                         Circle()
-                            .fill(Color("iconColor"))
+                            .fill(Color(iconColor))
+                            .frame(width:70, height:70)
+                        Text("Icon")
+                            .foregroundColor(.white)
+                    }
+                    .padding(.trailing, 10)
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10).stroke(Color.black)
+                            .frame(width:250, height:85)
+                        VStack{
+                            Text("**Name**")
+                                .font(.title2)
+                                .padding(.trailing, 170)
+                            Text("*Contact Info*")
+                                .padding(.trailing, 136)
+                            Text("Link to Bio")
+                                .underline()
+                                .padding(.trailing, 150)
+                        }
+                    }
+                    .padding(.bottom, 5)
+                    
+                }
+                HStack{
+                    ZStack{
+                        Circle()
+                            .fill(Color(iconColor))
                             .frame(width:70, height:70)
                         Text("Icon")
                             .foregroundColor(.white)
@@ -212,28 +214,6 @@ struct OtherHome: View {
                     
                 }
             }
-        }
-        .padding()
-        Rectangle()
-            .fill(.black)
-            .frame(width: 500, height: 3)
-            .padding(5)
-        HStack {
-            Image("homeIconc")
-                .resizable()
-                .frame(width: 50, height: 50)
-                .padding(.trailing, 50)
-            
-            NavigationLink(destination: BusinessEntry()) {
-                Image("plusIcon")
-                    .resizable()
-                    .frame(width: 45, height: 45)
-            }
-            
-            Image("personIcon")
-                .resizable()
-                .frame(width: 50, height: 50)
-                .padding(.leading, 50)
         }
     }
 }
