@@ -91,6 +91,11 @@ struct ContentView: View {
                 .frame(width: 55, height: 55)
                 .padding(.top, 448)
                 .padding(.leading, 210)
+            Text("Jobs Postings")
+                .font(.title)
+                .bold()
+                .padding(.bottom, 260)
+                .padding(.trailing, 160)
             ZStack(alignment: .leading) {
                 if !isEditingBusinessName && !isEditingCityState && !isEditingBio {
                     Button(action: {

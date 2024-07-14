@@ -10,54 +10,72 @@ struct StudentHome: View {
         let backColor = Color(red: 181/255, green: 202/255, blue: 231/255)
         VStack {
             VStack {
-                Spacer()
-                Spacer()
-                Spacer()
-                Button(action: {
-                    // Action when button is tapped
-                    self.isSearching.toggle() // Toggle search state
-                    print("Search button tapped with text: \(searchText)")
-                    // Implement your search logic here
-                }) {
-                    HStack {
-                        Image(systemName: "magnifyingglass") // Search icon
-                        TextField("Search", text: $searchText, onEditingChanged: { editing in
-                            // Optional: Handle editing changed event
-                        }, onCommit: {
-                            print("Search text committed: \(searchText)")
-                            // Implement your search logic here
-                        })
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .disabled(isSearching) // Disable text field when searching
-                    }
-                }
-                .padding()
-                .foregroundColor(.blue)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.black, lineWidth: 1)
-                )
-                Spacer()
                 ZStack {
+                    Button(action: {
+                        // Action when button is tapped
+                        self.isSearching.toggle() // Toggle search state
+                        print("Search button tapped with text: \(searchText)")
+                        // Implement your search logic here
+                    }) {
+                        HStack {
+                            Image(systemName: "magnifyingglass") // Search icon
+                            TextField("Search", text: $searchText, onEditingChanged: { editing in
+                                // Optional: Handle editing changed event
+                            }, onCommit: {
+                                print("Search text committed: \(searchText)")
+                                // Implement your search logic here
+                            })
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .disabled(isSearching) // Disable text field when searching
+                        }
+                    }
+                    .padding()
+                    .foregroundColor(.blue)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                    .frame(width: 370)
+                    .padding(.bottom, 600)
                     Rectangle()
                         .fill(backColor)
                         .frame(width: 500, height: 90)
-                        .padding(.top, 10)
+                        .padding(.bottom, 400)
                     Text("Welcome Back User!")
                         .font(.title)
                         .bold()
-                        .padding(.bottom, 20)
+                        .padding(.bottom, 430)
                     Text("Here's what's new: ")
-                        .padding(.top, 40)
-                }
-                Spacer()
-                ZStack {
-                    Text("Jobs")
+                        .padding(.bottom, 370)
+                    Text("Job Postings")
                         .font(.title)
                         .bold()
-                        .padding(.bottom, 480)
-                        .padding(.trailing, 280)
-                   
+                        .padding(.bottom, 240)
+                        .padding(.trailing, 190)
+                    Divider()
+                        .frame(width: 400, height: 3)
+                        .background(.black)
+                        .padding(.top, 740)
+                    Rectangle()
+                        .frame(width: 60, height: 60)
+                        .padding(.top, 825)
+                        .padding(.trailing, 5)
+                        .foregroundColor(.white)
+                    Image("Home Button")
+                        .resizable()
+                        .frame(width: 55, height: 55)
+                        .padding(.top, 825)
+                        .padding(.trailing, 225)
+                    Image("Account Button")
+                        .resizable()
+                        .frame(width: 55, height: 55)
+                        .padding(.top, 828)
+                        .padding(.leading, 210)
+                    Image("My Jobs")
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                        .padding(.top, 827)
+                        .padding(.trailing, 5)
                     VStack {
                         ForEach(dataModel.jobEntries) { entry in
                             HStack {
