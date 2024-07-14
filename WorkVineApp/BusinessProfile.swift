@@ -10,7 +10,7 @@ import SwiftUI
 struct BusinessProfile: View {
     @State private var businessName: String = "Business Name"
     @State private var cityState: String = "City, State"
-    @State private var bio: String = "Enter bio here..."
+    @State private var bio: String = "Email, Phone #"
     @State private var isEditingBusinessName: Bool = false
     @State private var isEditingCityState: Bool = false
     @State private var isEditingBio: Bool = false
@@ -148,7 +148,7 @@ struct BusinessProfile: View {
                 }
                 
                 if isEditingBio {
-                    TextField("Enter bio here...", text: $bio)
+                    TextField("Email, Phone #", text: $bio)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .onSubmit {
                             isEditingBio = false
@@ -165,11 +165,11 @@ struct BusinessProfile: View {
                 }
             }
             .padding(.leading, 27)
-            Text("Bio")
+            Text("Contact")
                 .font(.title)
                 .bold()
                 .padding(.bottom, 450)
-                .padding(.trailing, 296)
+                .padding(.trailing, 236)
             Rectangle()
                 .frame(width: 340, height: 1)
                 .padding(.bottom, 320)
