@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86109C7A2C45782A0065C582 /* AddEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86109C792C45782A0065C582 /* AddEntry.swift */; };
 		8620FDF82C4036FA00C53933 /* OtherHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8620FDF72C4036FA00C53933 /* OtherHome.swift */; };
 		863FCFC22C40919B00FDC703 /* JobDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863FCFC12C40919B00FDC703 /* JobDataModel.swift */; };
 		8687606E2C3D939600D8016F /* WorkVineAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8687606D2C3D939600D8016F /* WorkVineAppApp.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86109C792C45782A0065C582 /* AddEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntry.swift; sourceTree = "<group>"; };
 		8620FDF72C4036FA00C53933 /* OtherHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherHome.swift; sourceTree = "<group>"; };
 		863FCFC12C40919B00FDC703 /* JobDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDataModel.swift; sourceTree = "<group>"; };
 		8687606A2C3D939600D8016F /* WorkVineApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkVineApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				863FCFC12C40919B00FDC703 /* JobDataModel.swift */,
 				869003832C42BF9400DDF63C /* MyJobs.swift */,
 				86956EED2C4430B200AC0AE9 /* StudentProfile.swift */,
+				86109C792C45782A0065C582 /* AddEntry.swift */,
 				8620FDF72C4036FA00C53933 /* OtherHome.swift */,
 				868760712C3D939700D8016F /* Assets.xcassets */,
 				868760732C3D939700D8016F /* Preview Content */,
@@ -288,6 +291,7 @@
 				868760702C3D939600D8016F /* ContentView.swift in Sources */,
 				8687609E2C3D949800D8016F /* BusinessHome.swift in Sources */,
 				E56EC03B2C442B3900DC96D0 /* BusinessProfile.swift in Sources */,
+				86109C7A2C45782A0065C582 /* AddEntry.swift in Sources */,
 				863FCFC22C40919B00FDC703 /* JobDataModel.swift in Sources */,
 				86956EEE2C4430B200AC0AE9 /* StudentProfile.swift in Sources */,
 				868760982C3D941000D8016F /* SignIn.swift in Sources */,
