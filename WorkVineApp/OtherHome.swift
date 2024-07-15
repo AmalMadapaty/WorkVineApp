@@ -14,7 +14,7 @@ struct JobEntry: Identifiable {
     var companyName: String
     var city: String
     var period: String
-    var hourlyRate: String // New property for hourly rate
+    var hourlyRate: String
     var photo: UIImage?
 }
 
