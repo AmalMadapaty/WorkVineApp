@@ -22,6 +22,7 @@ struct ContentView: View {
                     Text("New")
                 }
             BusinessProfile()
+                .padding(.top, 40)
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")
