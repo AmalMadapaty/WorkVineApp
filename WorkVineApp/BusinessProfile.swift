@@ -68,11 +68,11 @@ struct BusinessProfile: View {
                 .foregroundColor(.white)
                 .padding(.bottom, 15)
                 .padding(.trailing, 253)
-            /*
             Rectangle()
                 .frame(width: 538, height: 90)
                 .foregroundColor(.white)
                 .padding(.top, 450)
+            /*
             Divider()
                 .frame(width: 400, height: 3)
                 .background(.black)
@@ -92,7 +92,7 @@ struct BusinessProfile: View {
                 .frame(width: 55, height: 55)
                 .padding(.top, 448)
                 .padding(.leading, 210)
-             */
+            */
             Text("Jobs Postings")
                 .font(.title)
                 .bold()
