@@ -94,7 +94,7 @@ struct StudentAcc: View {
                 .frame(width: 400, height: 3)
                 .background(.black)
                 .padding(.top, 360)
-            Image("Add Button")
+            Image("My Jobs")
                 .resizable()
                 .frame(width: 60, height: 60)
                 .padding(.top, 445)
