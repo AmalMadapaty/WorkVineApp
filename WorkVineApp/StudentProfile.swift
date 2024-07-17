@@ -90,25 +90,7 @@ struct StudentAcc: View {
                 .frame(width: 538, height: 90)
                 .foregroundColor(.white)
                 .padding(.top, 450)
-            Divider()
-                .frame(width: 400, height: 3)
-                .background(.black)
-                .padding(.top, 360)
-            Image("My Jobs")
-                .resizable()
-                .frame(width: 60, height: 60)
-                .padding(.top, 445)
-                .padding(.trailing, 5)
-            Image("Home Button")
-                .resizable()
-                .frame(width: 55, height: 55)
-                .padding(.top, 445)
-                .padding(.trailing, 225)
-            Image("Account Button")
-                .resizable()
-                .frame(width: 60, height: 55)
-                .padding(.top, 450)
-                .padding(.leading, 210)
+
             ZStack(alignment: .leading) {
                 if !isEditingBusinessName && !isEditingCityState && !isEditingBio {
                     Button(action: {
